@@ -41,7 +41,15 @@ void getContours(Mat imgDil, Mat img) {
             int objCor = (int)conPoly[i].size();
 
             if (objCor == 3) { objectType = "Tri"; }
-            else if (objCor == 4) { objectType = "Rect"; }
+            else if (objCor == 4) { 
+                float aspRatio = (float)boundRect[i].width / (float)boundRect[i].height;
+                if (aspRatio > 0.95 && aspRatio < 1.05) {
+                    objectType = "Square";
+                }
+                else {
+                    objectType = "Rect";
+                }
+            }
             else if (objCor > 4) { objectType = "Circile"; }
 
 
@@ -49,7 +57,7 @@ void getContours(Mat imgDil, Mat img) {
 
             rectangle(img, boundRect[i].tl(), boundRect[i].br(), Scalar(0, 255, 0), 5);
 
-            putText(img, objectType, { boundRect[i].x, boundRect[i].y-4 }, FONT_HERSHEY_DUPLEX, 0.75, Scalar(0, 69, 255), 2);
+            putText(img, objectType, { boundRect[i].x, boundRect[i].y-4 }, FONT_HERSHEY_PLAIN, 1, Scalar(0, 69, 255), 1);
 
         }
     }
