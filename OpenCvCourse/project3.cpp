@@ -47,6 +47,10 @@ void main() {
         waitKey(1);
 
         //I'll provide a revised version of the code that takes into account the potential issue of non-overlapping shapes. In this version, we'll ensure that the grid cells for masking overlap with the extent of your raster data. We'll also transform the grid cell shapes to match the CRS of the raster data. Please make sure that your raster data and Corine Land Cover classes are aligned correctly geographically.
+                //I'll provide a revised version of the code that takes into account the potential issue of non-overlapping shapes. In this version, we'll ensure that the grid cells for masking overlap with the extent of your raster data. We'll also transform the grid cell shapes to match the CRS of the raster data. Please make sure that your raster data and Corine Land Cover classes are aligned correctly geographically.
+
+                //I'll provide a revised version of the code that takes into account the potential issue of non-overlapping shapes. In this version, we'll ensure that the grid cells for masking overlap with the extent of your raster data. We'll also transform the grid cell shapes to match the CRS of the raster data. Please make sure that your raster data and Corine Land Cover classes are aligned correctly geographically.
+
     }
 
 }
